@@ -29,19 +29,19 @@ LRESULT CALLBACK MouseProc(int nCode, WPARAM wParam, LPARAM lParam) {
                     if (zDelta > 0) {
                         upCount++;
                         //std::cout << "up" << std::endl;
-                        if (upCount >= value1){
+                        if (upCount >= value1) {
                             upCount = 0;
                             return CallNextHookEx(hMouseHook, nCode, wParam, lParam);
-                        }else{
+                        } else {
                             return 1;
                         }
                     } else {
                         downCount++;
                         //std::cout << "down" << std::endl;
-                        if (downCount >= value1){
+                        if (downCount >= value1) {
                             downCount = 0;
                             return CallNextHookEx(hMouseHook, nCode, wParam, lParam);
-                        }else{
+                        } else {
                             return 1;
                         }
                     }
